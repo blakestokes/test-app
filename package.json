@@ -1,9 +1,10 @@
 {
   "name": "test-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "keywords": [],
   "author": "",
@@ -11,6 +12,13 @@
   "description": "",
   "dependencies": {
     "dotenv": "^16.4.7",
-    "openai": "^4.77.4"
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "openai": "^4.98.0",
+    "pokedex-promise-v2": "^4.2.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.1.0"
   }
 }
